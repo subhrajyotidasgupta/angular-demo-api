@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="form-group">
+                <label for="movie">Movie Name</label>
+                <input 
+                    type="text" 
+                    id="movie" 
+                    class="form-control"
+                    ngModel
+                    name="movie"
+                    required
+                    #movie="ngModel">
+                <span class="help-block" *ngIf="!movie.valid && movie.touched">Please enter a movie!</span>
+            </div>
+            <button 
+                class="btn btn-primary" 
+                type="submit"
+                [disabled]="!f.valid">Search</button>
+        </form>
+    </div>
+</div>

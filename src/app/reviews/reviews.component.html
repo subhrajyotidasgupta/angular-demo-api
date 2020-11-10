@@ -1,0 +1,10 @@
+<div class="row">
+    <div 
+        class="panel panel-default"
+        *ngFor="let review of reviews">
+        <div class="panel-heading">{{ review['display_title'] }}</div>
+        <div class="panel-body">
+            <span>{{ review['summary_short'] }}</span>
+        </div>
+    </div>
+</div>
